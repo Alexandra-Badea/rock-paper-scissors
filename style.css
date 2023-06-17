@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------- Body ------------ */
+
+body {
+    height: 100vh;
+    font-family: "Barlow Semi Condensed";
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+/* ----------- Header ------------- */
+
+header {
+    width: 50%;
+    margin: 2em auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 8px;
+    padding: 1em;
+}
+
+header img {
+    width: 100px;
+}
+
+header .table-score {
+    background-color: #fff;
+    padding: .2em 1.3em;
+    border-radius: 6px;
+}
+
+header .table-score p {
+    color: hsl(229, 64%, 46%);
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header .table-score span {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: hsl(229, 25%, 31%);
+    display: block;
+    text-align: center;
+}
+
+/* --------------- Main --------------- */
+
+.container {
+    background: url("images/bg-triangle.svg") no-repeat center;
+    min-height: 400px;
+    max-width: 500px;
+    margin: 0 auto; 
+    position: relative;
+}
+
+.container div {
+    padding: 1em 1.3em;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+    border: 13px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container img {
+    width: 50px;
+    height: 56px;
+}
+
+.container .item1 {
+    position: absolute;
+    top: 30px;
+    left: 78px;
+}
+
+.container .item2 {
+    position: absolute;
+    top: 30px;
+    right: 78px;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+}
+
+.container .item3 {
+    position: absolute;
+    top: 280px;
+    left: 200px;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
+}
+
+/* ---------------- Battle --------------------- */
+
+.battle {
+    width: 70%;
+    margin: 3em auto;
+    display: none;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.players #user-item,
+.players #computer-item {
+    padding: 33px;
+    border: 13px solid transparent;
+    border-radius: 50%;
+    margin: 2em auto;
+}
+
+.players img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.players p {
+    color: #fff;
+    font-weight: 600;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.paper {
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%)) border-box;
+}
+
+.scissors {
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+}
+
+.rock {
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
+}
+
+/* ---------- Result ------------------ */
+
+.conclusion p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.conclusion button {
+    margin: 1em 0;
+    padding: .7em 3em;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    letter-spacing: 1px;
+    font-size: .7rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.conclusion button:hover,
+.conclusion button:focus {
+    color: hsl(349, 71%, 52%);   
+}
+
+/* -------------- Footer -------------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+footer .attribution {
+    color: #fff;
+}
+
+footer button {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid hsl(217, 16%, 45%);
+    padding: .4em 1.8em;
+    border-radius: 5px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* ------------ Rules popup ------------------------ */
+
+.modal {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba(0,0,0,0.4); 
+   animation: fadeIn .4s;
+   display: none;
+}
+
+.modal .rules {
+    width: 50%;
+    max-width: 370px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; 
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0px 1px 9px 3px hsl(217, 16%, 45%);
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    animation: slideIn .4s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes slideIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.modal .rules h2 {
+    color: hsl(214, 47%, 23%);
+}
+
+.modal .rules .btn-close {
+    cursor: pointer;
+}
+
+.modal .rules .img-rules {
+    margin-top: 2em;
+}

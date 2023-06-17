@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="logo">
+    <div class="table-score">
+      <p>SCORE</p>
+      <span id="score" class="score">0</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="container" class="container">
+      <div id="paper" class="item item1">
+        <img class="img" src="images/icon-paper.svg" alt="paper icon">
+      </div>
+
+      <div id="scissors" class="item item2">
+        <img class="img" src="images/icon-scissors.svg" alt="scissors icon">
+      </div>
+
+      <div id="rock" class="item item3">
+        <img class="img" src="images/icon-rock.svg" alt="rock icon">
+      </div>
+    </div>
+    </div>
+
+    <div id="battle" class="battle">
+      <div class="players">
+        <div class="user">
+          <p>YOU PICKED</p>
+          <div id="user-item">
+            <img id="user-choice" src="" alt="">
+          </div>
+        </div>
+
+        <div class="conclusion">
+          <p id="result"></p>
+          <button id="restart">PLAY AGAIN</button>
+        </div>
+
+        <div class="computer">
+          <p>THE HOUSE PICKED</p>
+          <div id="computer-item">
+            <img id="computer-choice" src="" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="rules">
+        <h2>RULES</h2>
+        <img src="images/icon-close.svg" alt="close button" id="btn-close" class="btn-close">
+        <img src="images/image-rules.svg" alt="rules of the game" class="img-rules">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Alexandra</a>.</p>
+    </div>
+
+    <div>
+      <button id="btn-rules">RULES</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
